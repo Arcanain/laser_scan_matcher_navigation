@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
-    <arg name="initial_pose_x" default="-5.336889"/>
-    <arg name="initial_pose_y" default="-4.484180"/>
+	<arg name="initial_pose_x" default="0.0"/>
+    <arg name="initial_pose_y" default="0.0"/>
     <arg name="initial_pose_a" default="0.0"/>
 
     <arg name="map_file" default="$(find laser_scan_matcher_navigation)/maps/room1.yaml"/>

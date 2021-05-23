@@ -1,5 +1,5 @@
 <launch>
-<!-- move base -->
+    <!-- move base -->
     <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
         <param name="controller_frequency" value="10.0" />
         <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
