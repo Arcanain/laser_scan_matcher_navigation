@@ -1,18 +1,13 @@
 <launch>
-  <arg name="IS_TWISTSTAMPED" default="true" />
   <arg name="publish_covariance" default="false"/>
   
-  <param name="/stamped_vel" value="$(arg IS_TWISTSTAMPED)"/>
-
   <!-- publish an example base_link -> laser transform -->
-
   <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser"
     args="0.0 0.0 0.0 0.0 0.0 0.0 /base_link /laser 40" />
   <node pkg="tf" type="static_transform_publisher" name="laser_to_camera"
     args="0.0 0.0 0.0 0.0 0.0 0.0 /laser /camera_link 40" />
 
   <!-- start the laser scan_matcher -->
-
   <group if="$(arg publish_covariance)">
     <param name="laser_scan_matcher_node/do_compute_covariance" value="1"/>
     <param name="laser_scan_matcher_node/publish_pose_with_covariance" value="true"/>
@@ -61,13 +56,4 @@
     <param name="epsilon_theta" value="0.000001"/>
     <param name="outliers_maxPerc" value="0.90"/>
   </node>
-
-  <!-- AMCL -->
-  <include file="$(find laser_scan_matcher_navigation)/launch/amcl.launch" />
-
-  <!-- move_base -->
-  <include file="$(find laser_scan_matcher_navigation)/launch/move_base.launch" />
-
-  <!-- rviz -->
-  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find laser_scan_matcher_navigation)/rviz/laser_scan_matcher.rviz"/>
 </launch>
