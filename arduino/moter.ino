@@ -55,7 +55,7 @@ void setup(){
 
 void loop(){
   MotorL(w_l * 30);
-  MotorR(w_r*  30);
+  MotorR(-w_r*  30);
   nh.spinOnce();
 }
 
