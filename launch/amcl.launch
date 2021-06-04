@@ -4,7 +4,7 @@
     <arg name="initial_pose_y" default="0.0"/>
     <arg name="initial_pose_a" default="0.0"/>
 
-    <arg name="map_file" default="$(find laser_scan_matcher_navigation)/maps/two_floor.yaml"/>
+    <arg name="map_file" default="$(find laser_scan_matcher_navigation)/maps/home/two_floor.yaml"/>
     <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" output="screen"/>
     
 	<node pkg="amcl" type="amcl" name="amcl">

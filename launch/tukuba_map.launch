@@ -1,6 +1,6 @@
 <launch>
   <!-- map -->
-  <node pkg="map_server" type="map_server" name="map_server" args="$(find laser_scan_matcher_navigation)/maps/tukuba.yaml" output="screen">    
+  <node pkg="map_server" type="map_server" name="map_server" args="$(find laser_scan_matcher_navigation)/maps/tukuba_environment/tukuba.yaml" output="screen">    
     <!-- Topic Name -->
     <remap from="map" to="/map" />
     <remap from="map_metadata" to="/map_metadata" />

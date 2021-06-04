@@ -1,7 +1,7 @@
 <launch>
  
   <!-- map1 -->
-  <node pkg="map_server" type="map_server" name="map1_server" args="$(find laser_scan_matcher_navigation)/maps/map1.yaml" output="screen">    
+  <node pkg="map_server" type="map_server" name="map1_server" args="$(find laser_scan_matcher_navigation)/maps/tukuba_environment/map1.yaml" output="screen">    
     <!-- Topic Name -->
     <remap from="map" to="/map1" />
     <remap from="map_metadata" to="/map1_metadata" />
@@ -10,7 +10,7 @@
   </node>
 
   <!-- map2 -->
-  <node pkg="map_server" type="map_server" name="map2_server" args="$(find laser_scan_matcher_navigation)/maps/map2.yaml" output="screen">    
+  <node pkg="map_server" type="map_server" name="map2_server" args="$(find laser_scan_matcher_navigation)/maps/tukuba_environment/map2.yaml" output="screen">    
     <!-- Topic Name -->
     <remap from="map" to="/map2" />
     <remap from="map_metadata" to="/map2_metadata" />
@@ -19,7 +19,7 @@
   </node>
 
   <!-- map3 -->
-  <node pkg="map_server" type="map_server" name="map3_server" args="$(find laser_scan_matcher_navigation)/maps/map3.yaml" output="screen">    
+  <node pkg="map_server" type="map_server" name="map3_server" args="$(find laser_scan_matcher_navigation)/maps/tukuba_environment/map3.yaml" output="screen">    
     <!-- Topic Name -->
     <remap from="map" to="/map3" />
     <remap from="map_metadata" to="/map3_metadata" />
@@ -28,7 +28,7 @@
   </node>
 
   <!-- map4 -->
-  <node pkg="map_server" type="map_server" name="map4_server" args="$(find laser_scan_matcher_navigation)/maps/map4.yaml" output="screen">    
+  <node pkg="map_server" type="map_server" name="map4_server" args="$(find laser_scan_matcher_navigation)/maps/tukuba_environment/map4.yaml" output="screen">    
     <!-- Topic Name -->
     <remap from="map" to="/map4" />
     <remap from="map_metadata" to="/map4_metadata" />
@@ -37,7 +37,7 @@
   </node>
 
   <!-- map5 -->
-  <node pkg="map_server" type="map_server" name="map5_server" args="$(find laser_scan_matcher_navigation)/maps/map5.yaml" output="screen">    
+  <node pkg="map_server" type="map_server" name="map5_server" args="$(find laser_scan_matcher_navigation)/maps/tukuba_environment/map5.yaml" output="screen">    
     <!-- Topic Name -->
     <remap from="map" to="/map5" />
     <remap from="map_metadata" to="/map5_metadata" />
@@ -46,7 +46,7 @@
   </node>
 
   <!-- map6 -->
-  <node pkg="map_server" type="map_server" name="map6_server" args="$(find laser_scan_matcher_navigation)/maps/map6.yaml" output="screen">    
+  <node pkg="map_server" type="map_server" name="map6_server" args="$(find laser_scan_matcher_navigation)/maps/tukuba_environment/map6.yaml" output="screen">    
     <!-- Topic Name -->
     <remap from="map" to="/map6" />
     <remap from="map_metadata" to="/map6_metadata" />
