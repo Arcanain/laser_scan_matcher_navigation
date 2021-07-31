@@ -1,4 +1,13 @@
 <launch>
+  <!-- Start RPLIDAR sensor node which provides LaserScan data  -->
+  <node name="rplidarNode" pkg="rplidar_ros" type="rplidarNode" output="screen">
+      <param name="serial_port" type="string" value="/dev/ttyUSB0"/>
+      <param name="serial_baudrate" type="int" value="115200"/>
+      <!--<param name="serial_baudrate"     type="int"    value="256000"/>-->
+      <param name="frame_id" type="string" value="laser"/>
+      <param name="inverted" type="bool" value="false"/>
+      <param name="angle_compensate" type="bool" value="true"/>
+  </node>
   <!-- laser scan matcher -->
   <include file="$(find laser_scan_matcher_navigation)/launch/laser_scan_matcher.launch" />
   <!-- amcl -->
