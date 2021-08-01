@@ -14,8 +14,7 @@
     <param name="laser_scan_matcher_node/publish_pose_with_covariance_stamped" value="true"/>
   </group>
 
-  <node pkg="laser_scan_matcher" type="laser_scan_matcher_node" 
-    name="laser_scan_matcher_node" output="screen">
+  <node pkg="laser_scan_matcher" type="laser_scan_matcher_node" name="laser_scan_matcher_node" output="screen">
     <!-- Topics -->
     <remap from="scan" to="scan"/>
     <!--<remap from="cloud" to="/camera/depth/camera_info"/>-->

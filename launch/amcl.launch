@@ -5,7 +5,14 @@
     <arg name="initial_pose_a" default="0.0"/>
 
     <arg name="map_file" default="$(find laser_scan_matcher_navigation)/maps/home/two_floor.yaml"/>
-    <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" output="screen"/>
+
+    <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" output="screen">
+		<!-- Topic Name -->
+		<remap from="map" to="map" />
+		<remap from="map_metadata" to="map_metadata" />
+		<!-- Frame Name -->
+		<param name="frame_id" value="map" />
+    </node>
     
 	<node pkg="amcl" type="amcl" name="amcl">
         <param name="initial_pose_x"            value="$(arg initial_pose_x)"/>
