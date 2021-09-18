@@ -9,5 +9,7 @@
         <rosparam file="$(find laser_scan_matcher_navigation)/params/global_costmap_params.yaml" command="load"/>
         <rosparam file="$(find laser_scan_matcher_navigation)/params/dwa_local_planner_params.yaml" command="load" />
         <rosparam file="$(find laser_scan_matcher_navigation)/params/move_base_params.yaml" command="load"/>
+        <!--cmd_velをcmd_vel_move_baseにremap-->
+        <remap from="cmd_vel" to="cmd_vel_move_base"/>
     </node>
 </launch>

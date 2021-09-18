@@ -1,4 +1,5 @@
 <launch>
+
   <!-- Start RPLIDAR sensor node which provides LaserScan data  -->
   <node name="rplidarNode" pkg="rplidar_ros" type="rplidarNode" output="screen">
       <param name="serial_port" type="string" value="/dev/ttyUSB0"/>
@@ -8,15 +9,24 @@
       <param name="inverted" type="bool" value="false"/>
       <param name="angle_compensate" type="bool" value="true"/>
   </node>
+
   <!-- laser scan matcher -->
   <!-- Integration of lidar and IMU -->
   <!--<include file="$(find laser_scan_matcher_navigation)/launch/laser_scan_matcher.launch" />-->
-  <!-- Only lidar -->
-  <include file="$(find laser_scan_matcher_navigation)/launch/laser_scan_matcher_only_lidar.launch" />
+  <!-- use lidar -->
+  <!--<include file="$(find laser_scan_matcher_navigation)/launch/laser_scan_matcher_with_lidar.launch" />-->
+  <!-- use lidar and imu -->
+  <!--<include file="$(find laser_scan_matcher_navigation)/launch/laser_scan_matcher_with_imu_lidar.launch" />-->
+  <!-- use odom, lidar and imu -->
+  <include file="$(find laser_scan_matcher_navigation)/launch/laser_scan_matcher_with_odom_imu_lidar.launch" />
+
   <!-- amcl -->
   <include file="$(find laser_scan_matcher_navigation)/launch/amcl.launch" />
+
   <!-- move_base -->
   <include file="$(find laser_scan_matcher_navigation)/launch/move_base.launch" />
+
   <!-- rviz -->
   <node pkg="rviz" type="rviz" name="rviz" args="-d $(find laser_scan_matcher_navigation)/rviz/laser_scan_matcher.rviz"/>
+
 </launch>
