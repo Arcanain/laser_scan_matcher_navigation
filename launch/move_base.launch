@@ -3,11 +3,11 @@
     <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
         <param name="controller_frequency" value="10.0" />
         <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
-        <rosparam file="$(find laser_scan_matcher_navigation)/param/costmap_common_params.yaml" command="load" ns="global_costmap"/>
-        <rosparam file="$(find laser_scan_matcher_navigation)/param/costmap_common_params.yaml" command="load" ns="local_costmap"/>
-        <rosparam file="$(find laser_scan_matcher_navigation)/param/local_costmap_params.yaml" command="load"/>
-        <rosparam file="$(find laser_scan_matcher_navigation)/param/global_costmap_params.yaml" command="load"/>
-        <rosparam file="$(find laser_scan_matcher_navigation)/param/dwa_local_planner_params.yaml" command="load" />
-        <rosparam file="$(find laser_scan_matcher_navigation)/param/move_base_params.yaml" command="load"/>
+        <rosparam file="$(find laser_scan_matcher_navigation)/params/costmap_common_params.yaml" command="load" ns="global_costmap"/>
+        <rosparam file="$(find laser_scan_matcher_navigation)/params/costmap_common_params.yaml" command="load" ns="local_costmap"/>
+        <rosparam file="$(find laser_scan_matcher_navigation)/params/local_costmap_params.yaml" command="load"/>
+        <rosparam file="$(find laser_scan_matcher_navigation)/params/global_costmap_params.yaml" command="load"/>
+        <rosparam file="$(find laser_scan_matcher_navigation)/params/dwa_local_planner_params.yaml" command="load" />
+        <rosparam file="$(find laser_scan_matcher_navigation)/params/move_base_params.yaml" command="load"/>
     </node>
 </launch>
