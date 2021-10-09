@@ -13,5 +13,6 @@ roslaunch laser_scan_matcher_navigation navigation.launch
 - **amcl** : map->odom間の自己位置推定の修正
 - **movb base** : map->odom, odom->base_linkの情報を基にnavigationを行う
 
-**move base内で計算される/cmd_velを/cmd_vel_movebaseにremapしている事に注意**
+**move base内で計算される/cmd_velを/cmd_vel_move_baseにremapしている事に注意**  
+**最終的にはsystem_supervisorで/cmd_vel_move_base, /cmd_vel_obstacleのどちらを利用するかを判定する**
 
