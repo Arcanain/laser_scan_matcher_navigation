@@ -5,8 +5,8 @@
   <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser"
     args="0.0 0.0 0.0 0.0 0.0 0.0 /base_link /laser 40" />
 
-  <node pkg="tf" type="static_transform_publisher" name="laser_to_camera"
-    args="0.0 0.0 0.0 0.0 0.0 0.0 /base_link /imu_link 40" />
+  <node pkg="tf" type="static_transform_publisher" name="base_link_to_imu"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 /base_link /imu 40" />
 
   <!-- start the laser scan_matcher -->
   <group if="$(arg publish_covariance)">
