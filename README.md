@@ -18,3 +18,10 @@ roslaunch laser_scan_matcher_navigation navigation.launch
 
 [system_supervisor](https://github.com/TSUKUBA-CHALLENGE/system_supervisor)  
 [obstacle_avoidance](https://github.com/TSUKUBA-CHALLENGE/obstacle_avoidance)
+
+# 2021 10/30
+自律移動及び障害物回避達成(waypoint navigation)  
+
+```bash
+roslaunch laser_scan_matcher_navigation waypoint_navigation.launch 
+```
