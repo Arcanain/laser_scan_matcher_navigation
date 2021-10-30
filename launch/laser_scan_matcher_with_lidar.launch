@@ -33,7 +33,7 @@
     <!-- Point cloud input -->
     <param name="use_cloud_input" value="false"/>
     <param name="cloud_range_min" value="0.4"/>
-    <param name="cloud_range_max" value="10.0"/>
+    <param name="cloud_range_max" value="60.0"/>
 
     <!-- Key frames -->
     <param name="kf_dist_linear" value="0.1"/>

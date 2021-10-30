@@ -1,7 +1,8 @@
 #max_obstacle_height: 0.60  # assume something like an arm is mounted on top of the robot
 obstacle_range: 5.5 #2.5
 raytrace_range: 10.0 #3.0
-robot_radius: 0.18
+#robot_radius: 0.18
+robot_radius: 0.3
 inflation_radius: 0.5
 robot_base_frame: base_link
 

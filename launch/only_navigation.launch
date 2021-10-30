@@ -1,14 +1,11 @@
 <launch>
   <!-- laser scan matcher -->
-  <!-- Integration of lidar and IMU -->
-  <!--<include file="$(find laser_scan_matcher_navigation)/launch/laser_scan_matcher.launch" />-->
-
   <!-- use lidar -->
-  <include file="$(find laser_scan_matcher_navigation)/launch/laser_scan_matcher_with_lidar.launch" />
+  <!--<include file="$(find laser_scan_matcher_navigation)/launch/laser_scan_matcher_with_lidar.launch" />-->
   <!-- use lidar and imu -->
   <!--<include file="$(find laser_scan_matcher_navigation)/launch/laser_scan_matcher_with_imu_lidar.launch" />-->
   <!-- use odom, lidar and imu -->
-  <!--<include file="$(find laser_scan_matcher_navigation)/launch/laser_scan_matcher_with_odom_imu_lidar.launch" />-->
+  <include file="$(find laser_scan_matcher_navigation)/launch/laser_scan_matcher_with_odom_imu_lidar.launch" />
 
   <!-- amcl -->
   <include file="$(find laser_scan_matcher_navigation)/launch/amcl.launch" />
