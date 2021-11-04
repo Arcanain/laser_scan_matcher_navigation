@@ -19,7 +19,7 @@
   <!--<include file="$(find laser_scan_matcher_navigation)/launch/laser_scan_matcher_with_lidar.launch" />-->
   <!-- use lidar and imu -->
   <!-- <include file="$(find laser_scan_matcher_navigation)/launch/laser_scan_matcher_with_imu_lidar.launch" /> -->
-  <!-- use odom, lidar and imu -->
+  <!-- use lidar, imu and odom -->
   <include file="$(find laser_scan_matcher_navigation)/launch/laser_scan_matcher_with_odom_imu_lidar.launch" />
 
   <!-- amcl -->
